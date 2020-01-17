@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<!-- <div class="jumbotron jumbotron-fluid my-0 py-1">
-  <div class="container">
-    <h4 class="">Uttar Bharatiye Mahasangh</h4>
-  </div>
-</div> -->
-{#    {{ request.user }}#}
+{#  <div class="container">#}
+{#      <h4 class="text-center"><u>Uttar Bharatiye Mahasangh.</u></h4>#}
+{#  </div>#}
+    {#    {{ request.user }}#}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/media/13.png" class="d-block w-100" alt="...">
+      <img src="/media/1113.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="/media/11.png" class="d-block w-100" alt="...">
@@ -29,8 +27,8 @@
   </a>
 </div>
 
-<div class="alert alert-success alert-dismissible m-0" style="font-family:sans-serif">
-<h3 class="text-center"><u><strong>Latest Event</strong></u></h3>
+<div class="alert alert-success alert-dismissible m-0 " style="font-family:sans-serif">
+<h3 class="text-center m-0"><u style="position: relative;left: 27px"><strong>Uttar Bharatiye Mahasangh.</strong></u></h3>
 </div>
 
 
@@ -43,7 +41,7 @@
       <img src="/media/{{ i.photo }}" class="card-img-top" alt="...">
       <div class="card-body">
           <h5 class="card-title"><strong>{{ i.title }}</strong></h5>
-        <p class="card-text">{{ i.artical|slice:":115" }}...<a href="{{ i.slug }}">Read more</a></p>
+        <p class="card-text">{{ i.artical|slice:":115" }}...<a href="/events/{{ i.slug }}">Read more</a></p>
       </div>
        <div class="card-footer text-muted">
            {{ i.timestamp }}

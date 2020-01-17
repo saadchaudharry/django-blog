@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Bloglist.as_view(),name="home"),
     path('account/', register,name="register"),
-    path('<slug:slug>/', Blogdetail.as_view(),name="homedeatail"),
+    path('events/<slug:slug>/', Blogdetail.as_view(),name="homedeatail"),
     path('account/login/',LoginView.as_view(template_name='uttar.html'),name="los"),
 ]
 if settings.DEBUG:

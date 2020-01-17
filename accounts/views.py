@@ -12,7 +12,7 @@ def register(request):
             is_staff = request.POST.get(True)
             f.save()
             # messages.success(request, 'Account created successfully')
-            return redirect('home')
+            return redirect('los')
     else:
         f = Usercreate()
     return render(request, 'register.html', {'form':f})
